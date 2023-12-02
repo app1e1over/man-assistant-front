@@ -1,0 +1,16 @@
+.notable{
+    position: relative;
+
+    &:hover::after{
+        position: absolute;
+        top:20px;
+        left:0;
+        background-color: white;
+        font-size: 15px;
+        content: attr(note);
+        max-width: 10vw;
+    }
+}
+.notable .error{
+    text-decoration: underline red;
+}

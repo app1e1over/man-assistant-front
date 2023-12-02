@@ -1,0 +1,12 @@
+.chapters{
+    height: 100vh;
+    width:10vw;
+    border: 3px solid white;
+
+    a{
+        display: block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 20px;
+    }
+}

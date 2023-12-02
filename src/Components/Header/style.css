@@ -1,0 +1,1 @@
+header{height:1vh;width:100vw;background-color:var(--text);color:var(--background);display:flex;padding-top:4vh;padding-bottom:5vh}header select{background-color:rgba(0,0,0,0);color:var(--background);margin-left:50px}header select option{background-color:var(--text);padding:5px}header select option:hover{text-decoration:underline;background-color:var(--text)}

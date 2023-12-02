@@ -1,0 +1,22 @@
+header{
+    height: 1vh;
+    width: 100vw;
+    background-color: var(--text);
+    color:  var(--background);
+    display: flex;
+    padding-top: 4vh;
+    padding-bottom: 5vh;
+    & select{
+        background-color: transparent;
+        color: var(--background);
+        margin-left: 50px;
+        & option{
+            background-color: var(--text);
+            padding: 5px;
+            &:hover{
+                text-decoration: underline;
+                background-color: var(--text);;
+            }
+        }
+    }
+}
