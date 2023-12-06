@@ -1,15 +1,14 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import TextArea from "./Components/TextArea/TextArea";
 import { useEffect, useState } from "react";
 import Loader from "./Components/Loader/Loader";
-import LoadButton from "./Components/LoadButton/LoadButton";
 import Header from "./Components/Header/Header";
 import Chapters from "./Components/Chapters/Chapters";
 import Music from "./Components/Music/Music";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [chapters, setChapter] = useState([]);
   const [pages, setPages] = useState([""]);
   const text = (text)=>{

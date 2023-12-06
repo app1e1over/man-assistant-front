@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import MusicSelector from "./MusicSelector/MusicSelector";
 import MusicPlayer from "./MusicPlayer/MusicPlayer";
-import { useEffect } from "react";
 
 function Music(props) {
   const [videos, setVideos] = useState([
