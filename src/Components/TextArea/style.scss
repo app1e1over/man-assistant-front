@@ -28,7 +28,8 @@
         position: relative;
         margin: auto;
         text-align: center;
-        overflow-y: auto;
+        outline: 1px solid black;
+        margin-top: 20px;
     }
     & p, span{
         margin:0;

@@ -2,6 +2,8 @@
 :root{
   --text:#333333;
   --background: #f8f8f8 ;
+  --accent1:#A5FFC9;
+  --accent2:#A5C9FF
 }
 .App {
   text-align: center;
@@ -30,24 +32,23 @@
   }
 }
 body{
-  background-color: var(--background)
-
+  background-color: var(--background);
+  overflow: hidden;
 }
 
 .main{
-  display: flex;
-  align-items: baseline;
-  justify-items: center;
   background-color: inherit;
   color: var(--text);
-  flex-wrap: nowrap;
-}
-.outlay{
+  margin-top: 10vh;
 
-  text-align: center;
-  background-color:inherit;
-  color: var(--text);
 }
 .hidden{
   display: none;
+}
+.pages-cont{
+  margin: auto;
+  display: block;
+  overflow-y: scroll;
+  max-height: 90vh;
+  width: 45vw;
 }

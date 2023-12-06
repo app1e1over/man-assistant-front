@@ -4,8 +4,10 @@ header{
     background-color: var(--text);
     color:  var(--background);
     display: flex;
+    top: 0;
     padding-top: 4vh;
     padding-bottom: 5vh;
+    position: fixed;
     & select{
         background-color: transparent;
         color: var(--background);

@@ -1,0 +1,25 @@
+.mus-item{
+    color: var(--background);
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 20px;
+    text-decoration: none;
+    margin: 5px;
+    transition: all 0.5s ease;
+    padding: 5px;
+    &:hover{
+        color: var(--accent1);
+        
+    }
+    &.sel{
+        background-color: var(--accent2);
+
+    }
+    & button{
+        border: none;
+        transition: all 0.5s ease;
+        background-color: transparent;
+        margin-left: 5px;
+    }
+}

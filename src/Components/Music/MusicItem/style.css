@@ -1,0 +1,1 @@
+.mus-item{color:var(--background);display:block;text-overflow:ellipsis;overflow:hidden;height:20px;text-decoration:none;margin:5px;transition:all .5s ease;padding:5px}.mus-item:hover{color:var(--accent1)}.mus-item.sel{background-color:var(--accent2)}.mus-item button{border:none;transition:all .5s ease;background-color:rgba(0,0,0,0);margin-left:5px}

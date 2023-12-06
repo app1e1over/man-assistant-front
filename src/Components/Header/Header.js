@@ -1,11 +1,19 @@
 import React from "react";
 import "./style.css";
 import Fetcher from "../../JavaScript/Classes/Fetcher";
+import { useState } from "react";
 
-function Header({addChapter}) {
+function Header({text}) {
+
+  const [name, setName] = useState("");
+
+
+
   return (
     <header>
       <nav>
+        <label>Назва: <input value={name} type="text" onChange={(v)=>setName(v.target.value)}/></label>
+
         <select
           title="File"
           onChange={(e) => {
@@ -14,14 +22,14 @@ function Header({addChapter}) {
                 let r = window.confirm(
                   "Do you want to save your curent progres?"
                 );
-                if (r) Fetcher.save();
+                if (r) Fetcher.save(name, text());
                 break;
               }
               case 2:
-                Fetcher.save();
+                Fetcher.save(name, text());
                 break;
               case 3:
-                Fetcher.load();
+                Fetcher.load(setName, text);
                 break;
              
               default:{}
@@ -30,24 +38,11 @@ function Header({addChapter}) {
           }}
 
         >
-          <option className="hidden">File</option>
-          <option>New</option>
+          <option className="hidden">Файл</option>
+          <option>Новий</option>
 
-          <option>Save</option>
-          <option>Load</option>
-        </select>
-        <select onChange={(e)=>{
-            e.preventDefault();
-            addChapter(e.target.selectedIndex)
-            e.target.selectedIndex = 0;
-        }}>
-            <option className="hidden">Додати Розділ</option>
-            <option>Першого порядку</option>
-            <option>Другого порядку</option>
-            <option>Третього порядку</option>
-            <option>Четвертого порядку</option>
-            <option>П'ятого порядку</option>
-            <option>Шостого порядку</option>
+          <option>Зберегти</option>
+          <option>Загрузити</option>
         </select>
 
       </nav>

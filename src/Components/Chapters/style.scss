@@ -1,12 +1,21 @@
 .chapters{
     height: 100vh;
-    width:10vw;
+    width:15vw;
     border: 3px solid white;
-
+    background-color: var(--text);
+    position: fixed;
     a{
+        color: var(--background);
         display: block;
         text-overflow: ellipsis;
         overflow: hidden;
         height: 20px;
+        text-decoration: none;
+        margin: 5px;
+        transition: all 0.5s ease;
+    }
+    a:hover{
+        color: var(--accent1);
+        
     }
 }
