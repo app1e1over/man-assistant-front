@@ -6,7 +6,7 @@ import YouTube from 'react-youtube';
 const MusicPlayer = ({ videos, current, setCurrent }) => {
   // Options for the YouTube component
   const [player, setPlayer] = useState(null);
-    const [paused, setPaused] = useState(false);
+    const [paused, setPaused] = useState(true);
   const onReady = (event) => {
     setPlayer(event.target);
   };
@@ -23,10 +23,10 @@ const MusicPlayer = ({ videos, current, setCurrent }) => {
     width: '30',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
+      autoplay: 0,
     },
   };
-
+if(videos.length!==0)
   return (
     <div style={{position: "absolute", width:"10vw", top:"75%", left:"10%"}}>
         <h2>{videos[current].name}</h2>
@@ -36,6 +36,7 @@ const MusicPlayer = ({ videos, current, setCurrent }) => {
         <YouTube videoId={videos[current].id} opts={opts} onReady={onReady} style={{display:"none"}}/>
     </div>
   );
+  return <></>
 };
 
 export default MusicPlayer;

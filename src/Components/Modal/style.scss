@@ -1,0 +1,60 @@
+.backdrop{
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin:0;
+    display: block;
+    & .music{
+        margin-top: 40vh;
+        display: block;
+        text-align: center;
+        transition: 0.5s all ease;
+        & h1, label, div{
+            transition: inherit;
+            color: var(--accent2);
+
+            &:hover{
+                color: var(--accent1);
+
+            }
+        }
+        & .cat{
+            display: flex;
+            align-items: baseline;
+            margin: auto;
+            width: fit-content;
+        }
+        & ul{
+            transition: inherit;
+            list-style: none;
+            display: flex;
+            width: fit-content;
+            color: var(--accent2);
+            padding: 5px;
+            div &{
+                display: flex;
+                flex-wrap: nowrap;
+            }   
+            & li{
+                border: 1px solid var(--accent1);
+                margin-left: 5px;
+                padding: 2px;
+                & button{
+                    background-color: transparent;
+                    border: none;
+                }
+                &:hover{
+                    transition: inherit;
+                    padding: 4px;
+                    color: var(--accent1);
+
+                    border: 1px solid var(--accent2);
+                    ul &{
+                        padding: 3px;
+
+                    }
+                }
+            }
+        }
+    }
+}

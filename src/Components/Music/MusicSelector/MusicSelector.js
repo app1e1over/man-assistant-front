@@ -8,13 +8,12 @@ function MusicSelector({ videos, setVideos, category, curId, setCurid }) {
       name={v.name}
       selected = {i===curId}
       click = {()=>{setCurid(i)}}
-      remove={() => setVideos(videos.filter((c) => c.id !== v.id))}
+      remove={() => setVideos(videos.filter((c) => c.id !== v.id || c.name!==v.name))}
     />
   ));
   return (
     <div>
       <ul className="mus-sel">{disp}</ul>
-      <button>Додати пісню</button>
     </div>
   );
 }
