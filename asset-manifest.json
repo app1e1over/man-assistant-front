@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/man-assistant-front/static/css/main.e30ed0a4.css",
-    "main.js": "/man-assistant-front/static/js/main.a011428a.js",
+    "main.css": "/man-assistant-front/static/css/main.1c01720c.css",
+    "main.js": "/man-assistant-front/static/js/main.c0987204.js",
     "static/js/787.71df535f.chunk.js": "/man-assistant-front/static/js/787.71df535f.chunk.js",
     "index.html": "/man-assistant-front/index.html",
-    "main.e30ed0a4.css.map": "/man-assistant-front/static/css/main.e30ed0a4.css.map",
-    "main.a011428a.js.map": "/man-assistant-front/static/js/main.a011428a.js.map",
+    "main.1c01720c.css.map": "/man-assistant-front/static/css/main.1c01720c.css.map",
+    "main.c0987204.js.map": "/man-assistant-front/static/js/main.c0987204.js.map",
     "787.71df535f.chunk.js.map": "/man-assistant-front/static/js/787.71df535f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e30ed0a4.css",
-    "static/js/main.a011428a.js"
+    "static/css/main.1c01720c.css",
+    "static/js/main.c0987204.js"
   ]
 }
