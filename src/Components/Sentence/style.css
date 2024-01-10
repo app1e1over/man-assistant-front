@@ -1,1 +1,1 @@
-.notable{position:relative}.notable:hover::after{position:absolute;top:20px;left:0;background-color:#fff;font-size:15px;content:attr(note);max-width:10vw}.notable .error{-webkit-text-decoration:underline red;text-decoration:underline red}
+.notable{position:relative;transition:0,5s all}.notable .error{-webkit-text-decoration:underline var(--accent3);text-decoration:underline var(--accent3);pointer-events:initial}.notable .error:active{pointer-events:none}

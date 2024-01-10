@@ -1,9 +1,9 @@
 .chapters{
     height: 100vh;
     width:15vw;
-    border: 3px solid white;
     background-color: var(--text);
     position: fixed;
+    transition: var(--trans1);
     a{
         color: var(--background);
         display: block;
@@ -17,5 +17,25 @@
     a:hover{
         color: var(--accent1);
         
+    }
+    &.true{
+        transform: translate(-15vw, 0);
+    }
+}
+#unfold-chap{
+    position: fixed;
+    left: 15vw;
+    width:5vw;
+    top: 10vh;
+    height: 5vh;
+    background-color: var(--text);
+    color: var(--background);
+    border: 0;
+    outline: 0;
+    
+    transition: var(--trans1);
+    &.true{
+        left:0;
+        transform: rotate(180deg);
     }
 }

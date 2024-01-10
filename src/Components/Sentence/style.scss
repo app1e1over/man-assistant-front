@@ -1,16 +1,21 @@
 .notable{
     position: relative;
+    transition: 0,5s all;
+    // &:hover::after{
+    //     position: absolute;
+    //     top:20px;
+    //     left:0;
+    //     background-color: white;
+    //     font-size: 15px;
+    //     content: attr(note);
+    //     max-width: 10vw;
+    // }
 
-    &:hover::after{
-        position: absolute;
-        top:20px;
-        left:0;
-        background-color: white;
-        font-size: 15px;
-        content: attr(note);
-        max-width: 10vw;
+    & .error{
+        text-decoration: underline var(--accent3);
+        pointer-events:initial;
+        &:active{
+            pointer-events: none;
+        }
     }
-}
-.notable .error{
-    text-decoration: underline red;
 }

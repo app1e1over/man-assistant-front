@@ -1,5 +1,6 @@
 .page{
     width:40vw;
+
     height: 45rem;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -12,12 +13,12 @@
     position: absolute;
     top:0;
     left:0;
-    overflow-y: hidden;
-    overflow-x: hidden;
     &.input{
+        width: inherit;
+
         color: transparent;
         background-color: transparent;
-        pointer-events: all;
+        pointer-events:all;
         caret-color: var(--text);
         &:focus{
             border: none;
@@ -25,6 +26,7 @@
         }
     }
     &.holder{
+        width: inherit;
         position: relative;
         margin: auto;
         text-align: center;
@@ -37,6 +39,11 @@
        overflow-wrap: break-word;
     }
 }
+@media only screen and (max-width: 600px) {
+    .page{
+        width: 60vw;
+    }
+}
 .error{
-    background-color: red;
+    background-color: var(--accent3);
 }

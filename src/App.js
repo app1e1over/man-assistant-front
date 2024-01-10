@@ -5,21 +5,19 @@ import { useEffect, useState } from "react";
 import Loader from "./Components/Loader/Loader";
 import Header from "./Components/Header/Header";
 import Chapters from "./Components/Chapters/Chapters";
-import Music from "./Components/Music/Music";
 import Modal from "./Components/Modal/Modal";
-import axios from "axios";
+import Side from "./Components/Side/Side";
 
 function App() {
   const [loading] = useState(false);
   const [chapters, setChapter] = useState([]);
   const [pages, setPages] = useState([{text:"", edited:false}]);
   const [modal, setModal]= useState({type:"inactive", onFinish:()=>{}, data:[]})
-  const [editing, setEding] = useState(false);
   const text = (text)=>{
     if(text===undefined){
       let res = ""
       pages.forEach(e => {
-        res+=e+"\n";
+        res+=e.text+"\n";
       });
       return res;
     }else{
@@ -39,22 +37,11 @@ function App() {
     if(chapters.every(c=>c.id!==ch.id))
       setChapter([...chapters, ch]);
   };
-  const check = async ()=>{
-    pages.forEach(page => {
-      if(!page.edited){
-        page.text.split(" ").map(v=>v.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").trim()).filter(v=>v && v!=="").forEach(async v=>{
-          await fetch("https://goroh.pp.ua/%D0%A1%D0%BB%D0%BE%D0%B2%D0%BE%D0%B7%D0%BC%D1%96%D0%BD%D0%B0/"+v).then(v=>console.log(v.status)).catch(v=>console.log(v));
-        })
-        page.edited = true;
-      
-      }
-    });
-  }
   const addPage = (id, height)=>{
     let exesLines = (height-6)/22+1;
     let curText = pages[id].text;
     if(curText.split('\n').slice(-1).length/2-30*exesLines<5){
-      const toMove = curText.slice(curText.lastIndexOf('\n'))+"!focus!";
+      const toMove = curText.slice(curText.lastIndexOf('\n'))+"#focus#";
       pages[id].text = curText.slice(0, curText.lastIndexOf('\n'));
       if(pages.length>id+1){
         const npage=toMove+pages[id+1].text;
@@ -64,11 +51,6 @@ function App() {
         pages.push({text:toMove, edited:false});
       }
       setPages([...pages]);
-    }
-    if(!editing){
-      setEding(true);
-      check().then(()=>setEding(false))
-
     }
 
   }
@@ -84,7 +66,7 @@ function App() {
         <div className="pages-cont">
           {pagesDispl}
         </div>
-        <Music setModal={setModal}/>
+        <Side setModal={setModal}/>
       </div>
       {loading ? (
         <Loader />

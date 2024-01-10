@@ -3,7 +3,10 @@
   --text:#333333;
   --background: #f8f8f8 ;
   --accent1:#A5FFC9;
-  --accent2:#A5C9FF
+  --accent2:#A5C9FF;
+  --accent3:#EC6F66;
+
+  --trans1: 1s all;
 }
 .App {
   text-align: center;
@@ -51,4 +54,58 @@ body{
   overflow-y: scroll;
   max-height: 90vh;
   width: 45vw;
+}
+@media only screen and (max-width: 600px) {
+  .pages-cont{
+    margin: auto;
+    display: block;
+    max-height: 90vh;
+    width: 65vw;
+  }
+}
+select {
+  color: var(--accent2);
+  background-color: var(--text);
+  padding: 5px;
+  cursor: pointer;
+  font-size: 150;
+  transition: var(--trans1);
+  border: 2px solid var(--background);
+}
+
+select:hover, select:active, select:focus {
+  padding: 15px 5px 15px 25px;
+  border: 2px solid var(--accent2);
+
+}
+
+select option {
+  color: var(--accent2);
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+input{
+  transition: var(--trans1);
+  background-color: var(--background);
+  color: var(--text);
+  border: 1px solid var(--accent2);
+  outline: none;
+  border-radius: 50px 20px;
+}
+input:hover, input:active, input:focus{
+  background-color: var(--text);
+  color: var(--accent1);
+  border: 1px solid var(--accent1);
+  outline: none;
+  border-radius: 50px 20px;
+  padding: 2px;
+
+}
+label{
+  transition: var(--trans1);
+  color: var(--accent2);
+}
+label:hover, label:active, label:focus{
+  color: var(--accent1);
 }

@@ -1,0 +1,31 @@
+.side-panel{
+    height: calc(100vh - 50px);
+    width:15vw;
+    top: calc(10vh + 50px);
+    border: 3px solid white;
+    color: white;
+    background-color: var(--text);
+    position: fixed;
+    left:85vw;
+    transition: all 0.5s ease;
+    &.true{
+        transform: translate(15vw,0);
+       
+    }
+}
+#unfold{
+    
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    width:15vw;
+    top: 10vh;
+    height: 50px;
+    background-color: var(--text);
+    color: var(--background);
+    border: 0;
+    outline: 0;
+    &.true{        
+        transform: rotate(180deg);
+    }
+}
